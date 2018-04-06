@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>EDIT/PADAM MAKLUMAT LOGO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-image">
+  <ion-list>
+    <ion-list-header>
+      Arahan: Pilih senarai negara untuk dikemaskini 
+  </ion-list-header>
+  <ion-item *ngFor="let klogo of senaraiLogo$ | async"
+  detail-push navPush = "EditbuangmaklogoPage" [navParams] = '{klogo: klogo}'>     
+      {{klogo.negara}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+

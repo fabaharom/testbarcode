@@ -1,0 +1,44 @@
+
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>{{kproduk?.namap}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bg-image">
+
+  <ion-item>
+      <ion-label floating>Nama produk:</ion-label>
+      <ion-input [(ngModel)] = "kproduk.namap" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Nama syarikat pengeluaran:</ion-label>
+      <ion-input [(ngModel)] = "kproduk.syarikat" placeholder = ""></ion-input>
+    </ion-item>
+
+  <ion-item>
+      <ion-label floating>Kategori Produk:</ion-label>
+      <ion-input [(ngModel)] = "kproduk.kategori" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Status produk:</ion-label>
+      <ion-input [(ngModel)] = "kproduk.status" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Kandungan bahan:</ion-label>
+      <ion-input [(ngModel)] = "kproduk.bahan" placeholder = ""></ion-input>
+    </ion-item>
+
+  <ion-item>
+      <ion-label floating>Negara pengeluaran:</ion-label>
+      <ion-input [(ngModel)] = "kproduk.negarap" placeholder = ""></ion-input>
+  </ion-item>
+
+  <button ion-button round (click) = "saveItem(kproduk)">Simpan</button>
+  <button ion-button round color = "danger" (click) = "removeItem(kproduk)">Padam</button>
+
+</ion-content>

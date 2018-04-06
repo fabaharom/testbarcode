@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>{{klogo?.negara}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-image">
+
+    <ion-item>
+        <ion-label floating>Negara</ion-label>
+        <ion-input [(ngModel)] = "klogo.negara" placeholder = ""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Organisasi</ion-label>
+        <ion-input [(ngModel)] = "klogo.organisasi" placeholder = ""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Alamat</ion-label>
+        <ion-input [(ngModel)] = "klogo.alamat" placeholder = ""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Nama untuk dihubungi</ion-label>
+        <ion-input [(ngModel)] = "klogo.nama" placeholder = ""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>No telefon</ion-label>
+        <ion-input [(ngModel)] = "klogo.notelefon" placeholder = ""></ion-input>
+      </ion-item>
+
+      <button ion-button round (click) = "saveItem(klogo)">Simpan</button>
+      <button ion-button round color = "danger" (click) = "removeItem(klogo)">Padam</button>
+</ion-content>

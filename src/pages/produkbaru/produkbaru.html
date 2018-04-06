@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>TAMBAH PRODUK BARU</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class>
+
+  <ion-item>
+    <ion-label>Nombor Kodbar</ion-label>
+    <ion-input [(ngModel)] = "produk.kodbar" placeholder = "9556231111110"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nama Produk</ion-label>
+    <ion-input [(ngModel)] = "produk.nama" placeholde = "Gardenia Original Classic"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Negara Pengeluaran</ion-label>
+    <ion-input [(ngModel)] = "produk.negara" placeholder = "Malaysia"></ion-input>
+  </ion-item>
+
+  {{produk | json}}
+
+  <button ion-button round (click) = "addItem(produk)">Hantar</button>
+</ion-content>

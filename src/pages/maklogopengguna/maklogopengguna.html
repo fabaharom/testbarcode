@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>LOGO HALAL</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg-image">
+  <ion-card *ngFor="let klogo of senaraiLogo$ | async; let i = index">
+    <ion-card-header>
+      #{{ i + 1}}
+    </ion-card-header> 
+    <ion-card-content>
+      {{klogo.negara}}
+        <hr>
+      {{klogo.organisasi}}
+        <hr>
+      {{klogo.alamat}}
+        <hr>
+      {{klogo.nama}}
+        <hr>
+      {{klogo.notelefon}}
+    </ion-card-content> 
+    <ion-row>
+      <ion-col text-right></ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

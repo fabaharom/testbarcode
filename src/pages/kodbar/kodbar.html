@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>IMBASAN KODBAR PRODUK</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-image">
+  <button ion-button block clear (click) = "scan()">Imbas Kodbar Produk</button>
+  <div *ngIf = "scanData">
+    <p>Scanned Text : </p>
+    <p>Scanned Format : </p>
+  </div>
+  
+</ion-content>

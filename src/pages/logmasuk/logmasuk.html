@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>LOG MASUK PENTADBIR</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-image">
+  <ion-item>
+    <ion-label floating>Alamat Email</ion-label>
+    <ion-input type = "text" [(ngModel)] = "pentadbir.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Kata Laluan</ion-label>
+    <ion-input type = "password" [(ngModel)] = "pentadbir.password"></ion-input>
+  </ion-item>
+
+  <button ion-button round (click) = "login(pentadbir)">Masuk</button>
+</ion-content>

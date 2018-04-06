@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>TAMBAH MAKLUMAT LOGO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-image">
+  <ion-item>
+    <ion-label floating>Negara</ion-label>
+    <ion-input [(ngModel)] = "klogo.negara" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Organisasi</ion-label>
+    <ion-input [(ngModel)] = "klogo.organisasi" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Alamat</ion-label>
+    <ion-input [(ngModel)] = "klogo.alamat" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Nama untuk dihubungi</ion-label>
+    <ion-input [(ngModel)] = "klogo.nama" placeholder = ""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>No telefon</ion-label>
+    <ion-input [(ngModel)] = "klogo.notelefon" placeholder = ""></ion-input>
+  </ion-item>
+
+  {{klogo | json}}
+
+  <button ion-button round (click) = "addItem(klogo)">Tambah</button>
+  <button ion-button round (click) = "onGoToPilihkemaskinimaklogo()">Laman edit/padam</button>
+  <button ion-button icon-only (click) = "onGoToGambarlogo()">
+    <ion-icon name ="image"></ion-icon>
+  </button>
+</ion-content>

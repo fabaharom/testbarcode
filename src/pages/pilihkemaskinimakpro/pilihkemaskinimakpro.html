@@ -1,0 +1,22 @@
+
+<ion-header>
+    
+      <ion-navbar color="primary">
+        <ion-title>EDIT/PADAM MAKLUMAT PRODUK HALAL</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding class="bg-image">
+      <ion-list>
+        <ion-list-header>
+          Arahan: Pilih produk untuk dikemaskini 
+      </ion-list-header>
+      <ion-item *ngFor="let kproduk of senaraiMakPro$ | async"       
+      detail-push navPush = "EditbuangmakproPage" [navParams] = '{kproduk: kproduk}'>
+          {{kproduk.namap}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    
