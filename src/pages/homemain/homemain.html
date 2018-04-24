@@ -4,16 +4,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="bg-image">
+<ion-content padding class>
 
   <button ion-button icon-only (click) = "onGoToLogmasuk()">
     <ion-icon name ="lock"></ion-icon>
   </button>
-  <br>
+  
+  <button ion-button icon-only (click) = "scan()">
+      <ion-icon name = "barcode"></ion-icon>
+    
+    </button>
+
   <hr>
-  <button ion-button full icon-left (click) = "onGoToKodbar()"> 
-    <ion-icon name = "barcode"></ion-icon> Imbasan Kodbar
-  </button>
   <br>
   <button ion-button full icon-left (click) = "onGoToProdukbaru()"> 
     <ion-icon name = "add"></ion-icon> Tambah Produk Baru
@@ -34,5 +36,11 @@
   <button ion-button full icon-left (click) = "onGoToMaklogopengguna()"> 
       <ion-icon name = "flag"></ion-icon> Logo Halal
   </button>
+  <br>
+
+  <div *ngIf = "scanData">
+    <p>Scanned Text : </p>
+    <p>Scanned Format : </p>
+  </div>
   
 </ion-content>

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 
-
 import { SenaraiMakProService } from '../../services/senarai-produk/senarai-makpro.service';
 import { Kproduk } from "../../models/kemaskiniproduk";
 

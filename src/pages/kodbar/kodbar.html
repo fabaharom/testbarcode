@@ -1,17 +1,32 @@
 <ion-header>
-
   <ion-navbar color = "primary">
     <ion-title>IMBASAN KODBAR PRODUK</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content padding class>
 
-<ion-content padding class="bg-image">
-  <button ion-button block clear (click) = "scan()">Imbas Kodbar Produk</button>
-  <div *ngIf = "scanData">
-    <p>Scanned Text : </p>
-    <p>Scanned Format : </p>
-  </div>
-  
-</ion-content>
+  <h1>
+    <button ion-button color="primary" full round (click) = "scan()">
+      Mulakan imbasan</button>
+  </h1>
+
+  <ion-card *ngIf = "productFound">
+    <ion-card-header>
+      <h2>Nama produk: {{kproduk.namap}}</h2>
+    </ion-card-header>
+  <ion-card-content>
+    <ul>
+      <li>{{kproduk.syarikat}}</li>
+      <li>{{kproduk.kategori}}</li>
+      <li>{{kproduk.status}}</li>
+      <li>{{kproduk.bahan}}</li>
+      <li>{{kproduk.negarap}}</li>
+    </ul>
+  </ion-card-content>
+  </ion-card>
+
+  </ion-content>
+
+
+

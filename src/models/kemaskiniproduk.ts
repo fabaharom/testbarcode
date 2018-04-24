@@ -1,5 +1,6 @@
 export interface Kproduk {
     key?: string;
+    kodbar: string;
     namap: string;
     syarikat: string;
     kategori: string;

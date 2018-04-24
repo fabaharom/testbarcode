@@ -8,8 +8,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class KodepenggunaPage {
 
-  /*constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }*/
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
   items = [
     'Kod-e',

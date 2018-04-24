@@ -11,6 +11,8 @@ import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
 
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from "./app.firebase.config";
@@ -29,12 +31,13 @@ import { PilihkemaskinimakproPage } from '../pages/pilihkemaskinimakpro/pilihkem
 import { KodepentadbirPage } from '../pages/kodepentadbir/kodepentadbir';
 import { MaklogopentadbirPage } from '../pages/maklogopentadbir/maklogopentadbir';
 import { PilihkemaskinimaklogoPage } from '../pages/pilihkemaskinimaklogo/pilihkemaskinimaklogo';
+import { TabsPage } from '../pages/tabs/tabs';
 
 import { SenaraiProdukService } from './../services/senarai-produk/senarai-produk.service';
 import { SenaraiMakProService } from './../services/senarai-produk/senarai-makpro.service';
 import { ToastService } from '../services/toast/toast.service';
 import { SenaraiLogoService } from './../services/senarai-logo/senarai-maklogo';
-
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -52,17 +55,18 @@ import { SenaraiLogoService } from './../services/senarai-logo/senarai-maklogo';
     KodepentadbirPage,
     MaklogopentadbirPage,
     PilihkemaskinimakproPage,
-    PilihkemaskinimaklogoPage
-    
+    PilihkemaskinimaklogoPage,
+    TabsPage,
   ],
+
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
-  
+    AngularFireDatabaseModule,
   ],
+  
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -79,16 +83,18 @@ import { SenaraiLogoService } from './../services/senarai-logo/senarai-maklogo';
     KodepentadbirPage,
     MaklogopentadbirPage,
     PilihkemaskinimakproPage,
-    PilihkemaskinimaklogoPage
-    
+    PilihkemaskinimaklogoPage,
+    TabsPage,
   ],
-  providers: [
-    StatusBar,
+  providers: [ StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SenaraiProdukService, SenaraiMakProService,
     ToastService, SenaraiLogoService, 
-    Camera, BarcodeScanner, FileChooser, File,
+    FileChooser, File,
+    Transfer,
+    Camera,
+    FilePath, BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

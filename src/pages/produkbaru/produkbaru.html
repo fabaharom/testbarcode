@@ -1,13 +1,15 @@
 <ion-header>
-
   <ion-navbar color = "primary">
     <ion-title>TAMBAH PRODUK BARU</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding class>
+
+  <ion-item>
+    <ion-label>Gambar Produk</ion-label>
+    <ion-input [(ngModel)] = "produk.gambar" placeholder = ""></ion-input>
+  </ion-item>
 
   <ion-item>
     <ion-label>Nombor Kodbar</ion-label>
@@ -27,4 +29,8 @@
   {{produk | json}}
 
   <button ion-button round (click) = "addItem(produk)">Hantar</button>
+  <button ion-button (click)="scan()">Imbas Kodbar</button>
 </ion-content>
+  
+
+

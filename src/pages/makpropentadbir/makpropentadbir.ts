@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PilihkemaskinimakproPage } from "./../../pages/pilihkemaskinimakpro/pilihkemaskinimakpro";
 import { ToastService } from '../../services/toast/toast.service';
+//import { BarcodeScanner }
 
 @IonicPage()
 @Component({
@@ -13,6 +14,7 @@ import { ToastService } from '../../services/toast/toast.service';
 export class MakpropentadbirPage {
 
   kproduk : Kproduk = {
+    kodbar: undefined,
     namap: undefined,
     syarikat: undefined,
     kategori: undefined,
